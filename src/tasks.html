@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<title>Список задач</title>
+
+	<link rel="icon" type="image/svg+xml" href="/img/icon/favicon-white.svg">
+	
+	<!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__inner">
+			<div class="header__mobile">
+				<a href="/index.html" class="header__mobile-logo"><img src="/img/logo-mobile.svg" alt="Дом дворняги веста"></a>
+				<a href="#" class="header__mobile-button button button-secondary">Помочь приюту</a>
+				<div class="header__menu">
+					<input class="header__menu-checkbox js-menu-checkbox" type="checkbox" name="header__menu-checkbox" />
+					<div class="header__menu-lines">
+						<span class="line line1"></span>
+						<span class="line line2"></span>
+						<span class="line line3"></span>
+					</div>
+				</div>
+			</div>
+			<a href="/index.html" class="header__logo"><img src="/img/logo.svg" alt="Дом дворняги веста"></a>
+			<a href="/index.html" class="header__logo-md"><img src="/img/logo-mobile.svg" alt="Дом дворняги веста"></a>
+			<div class="header__content">
+				<div class="header__contact">
+					<a href="tel:+8(800)000-00-00" class="header__contact-tel">8 800 000 00 00</a>
+					<div class="header__contact-social">
+						<a href="#" class="header__contact-item"><img src="/img/icon/WhatsApp.svg" alt="WhatsApp"></a>
+						<a href="#" class="header__contact-item"><img src="/img/icon/Telegram.svg" alt="Telegram"></a>
+					</div>
+					<a href="#" class="header__contact-item"> <img src="/img/icon/geoposition.svg" alt="geoposition"></a>
+					<a href="#" class="button button-secondary">Помочь приюту</a>
+				</div>
+				<nav class="header__nav">
+					<ul class="header__list">
+						<li class="header__list-item"><a class="link-nav" href="/about.html">О приюте</a></li>
+						<li class="header__list-item"><a class="link-nav" href="/projects.html">Проекты</a></li>
+						<li class="header__list-item"><a class="link-nav link-active" role="link" aria-disabled="true">Список
+								задач</a></li>
+						<li class="header__list-item">
+							<div class="header__menu">
+								<input class="header__menu-checkbox js-menu-checkbox" type="checkbox" name="header__menu-checkbox" />
+								<div class="header__menu-lines">
+									<span class="line line1"></span>
+									<span class="line line2"></span>
+									<span class="line line3"></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="header__menu-container">
+			<div class="header__menu-expand">
+				<nav class="header__nav">
+					<ul class="header__list">
+						<li class="header__list-item"><a class="link-nav" href="/about.html">О приюте</a></li>
+						<li class="header__list-item"><a class="link-nav" href="/projects.html">Проекты</a></li>
+						<li class="header__list-item"><a class="link-nav link-active" role="link" aria-disabled="true">Список
+								задач</a></li>
+					</ul>
+				</nav>
+				<div class="header__contact-button mobile-visible"><a href="#" class="button button-secondary">Помочь приюту</a>
+				</div>
+				<div class="header__contact mobile-visible">
+					<a href="tel:+8(800)000-00-00" class="header__contact-tel">8 800 000 00 00</a>
+					<div class="header__contact-social">
+						<a href="#" class="header__contact-item"><img src="/img/icon/WhatsApp.svg" alt="WhatsApp"></a>
+						<a href="#" class="header__contact-item"><img src="/img/icon/Telegram.svg" alt="Telegram"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<nav class="container breadcrumbs__container">
+		<ul class="breadcrumbs__list">
+			<li class="breadcrumbs__item"><a href="#">Главная</a></li>
+			<li class="breadcrumbs__item"><a class="link-active" href="#">Список задач</a></li>
+		</ul>
+	</nav>
+
+	<main class="main">
+
+		<section class="container">
+			<div class="tasks__container">
+				<h1 class="tasks__title h1">Список задач</h1>
+
+				<dialog class="tasks__dialog" id="taskDialog">
+					<form method="dialog" class="tasks__form">
+						<h2 class="h2">Добавить задачу</h2>
+						<div class="tasks__form-container">
+							<div class="tasks__form-inputs">
+								<input class="tasks__checkbox form__input" type="checkbox" name="taskStatus" id="taskStatus">
+								<input class="tasks__input form__input" type="text" name="taskName" id="taskName"
+									placeholder="Название задачи">
+							</div>
+							<div class="tasks__form-buttons">
+								<button class="button button-primary" type="submit">Добавить</button>
+								<button class="button button-secondary" type="button"
+									onclick="window.taskDialog.close()">Закрыть</button>
+							</div>
+						</div>
+					</form>
+				</dialog>
+
+				<div class="tasks__inner">
+					<div class="tasks__column">
+						<h2 class="h2">Предстоящие</h2>
+						<ul class="tasks__list">
+							<li class="tasks__item">Погладить кота</li>
+							<li class="tasks__item">Купить корм</li>
+							<li class="tasks__item">Искупать собакена</li>
+						</ul>
+					</div>
+					<div class="tasks__column">
+						<h2 class="h2">В работе</h2>
+						<ul class="tasks__list">
+							<li class="tasks__item">Заработать 1 000 000 денег</li>
+							<li class="tasks__item">Сделать Численны методы</li>
+						</ul>
+					</div>
+					<div class="tasks__column">
+						<h2 class="h2">Выполненные</h2>
+						<ul class="tasks__list">
+							<li class="tasks__item">Приготовить макароны</li>
+							<li class="tasks__item">Заточить макароны</li>
+						</ul>
+					</div>
+				</div>
+
+				<button class="tasks__button-add button button-primary" onclick="window.taskDialog.showModal()">Добавить
+					задачу</button>
+
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__inner">
+			<div class="footer__info">
+				<a href="/index.html" class="footer__logo"><img src="/img/logo.svg" alt="Дом дворняги веста"></a>
+				<p class="p">Приют для безнадзорных животных</p>
+				<p class="p">
+					<span>ИНН: 12345566677</span>
+					<span>ОГРН: 12345566677</span>
+				</p>
+				<p class="p">© 2024 Все права защищены.</p>
+				<p class="p">Политика конфиденциальности</p>
+			</div>
+			<div class="footer__menu">
+				<ul class="footer__list">
+					<li class="footer__list-item"><a class="footer__link link-nav" href="/about.html">О приюте</a></li>
+					<li class="footer__list-item"><a class="footer__link link-nav" href="/projects.html">Проекты</a></li>
+					<li class="footer__list-item"><a class="footer__link link-nav" href="/tasks.html">Список задач</a></li>
+				</ul>
+				<ul class="footer__list">
+					<li class="footer__list-item"><a class="footer__link link-nav" href="/about.html">О приюте</a></li>
+					<li class="footer__list-item"><a class="footer__link link-nav" href="/projects.html">Проекты</a></li>
+					<li class="footer__list-item"><a class="footer__link link-nav" href="/tasks.html">Список задач</a></li>
+				</ul>
+			</div>
+			<div class="footer__contact">
+				<div class="footer__contact-adress"><img src="/img/icon/geo.svg" alt="">г. Москва, Красная площадь дом 2</div>
+				<div class="footer__contact-mail"><img src="/img/icon/letter.svg" alt="">info@приют.ru</div>
+				<div class="footer__contact-group">
+					<a href="tel:+8(800)000-00-00" class="footer__contact-tel">8 800 000 00 00</a>
+					<div class="footer__contact-social">
+						<a href="#" class="footer__contact-item"><img src="/img/icon/WhatsApp.svg" alt="WhatsApp"></a>
+						<a href="#" class="footer__contact-item"><img src="/img/icon/Telegram.svg" alt="Telegram"></a>
+					</div>
+				</div>
+				<div class="footer__contact-links">
+					<a href="#" class="footer__contact-item"><img src="/img/icon/Vkontakte (VK).svg" alt="Vkontakte (VK)"></a>
+					<a href="#" class="footer__contact-item"><img src="/img/icon/Odnoklassniki (OK).svg"
+							alt="Odnoklassniki (OK)"></a>
+					<a href="#" class="footer__contact-item"><img src="/img/icon/YouTube.svg" alt="YouTube"></a>
+				</div>
+				<a href="#" class="button button-secondary button-uppercase">Помочь приюту</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+	<script src="bundle.js"></script>
+</body>
+
+</html>
