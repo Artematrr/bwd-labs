@@ -1,3 +1,4 @@
 import './style.css'
-import './script.js'
-
+import './burger-menu-API.js'
+import './tasks-API.js'
+import './dialog-API.js'

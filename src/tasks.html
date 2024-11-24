@@ -7,8 +7,6 @@
 	<title>Список задач</title>
 
 	<link rel="icon" type="image/svg+xml" href="/img/icon/favicon-white.svg">
-	
-	<!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
@@ -96,13 +94,13 @@
 				<h1 class="tasks__title h1">Список задач</h1>
 
 				<dialog class="tasks__dialog" id="taskDialog">
-					<form method="dialog" class="tasks__form">
+					<form method="dialog" class="tasks__form" id="taskForm">
 						<h2 class="h2">Добавить задачу</h2>
 						<div class="tasks__form-container">
 							<div class="tasks__form-inputs">
-								<input class="tasks__checkbox form__input" type="checkbox" name="taskStatus" id="taskStatus">
 								<input class="tasks__input form__input" type="text" name="taskName" id="taskName"
-									placeholder="Название задачи">
+									placeholder="Название задачи" tabindex="1">
+								<input class="tasks__checkbox form__input" type="checkbox" name="taskStatus" id="taskStatus">
 							</div>
 							<div class="tasks__form-buttons">
 								<button class="button button-primary" type="submit">Добавить</button>
@@ -116,27 +114,67 @@
 				<div class="tasks__inner">
 					<div class="tasks__column">
 						<h2 class="h2">Предстоящие</h2>
-						<ul class="tasks__list">
-							<li class="tasks__item">Погладить кота</li>
-							<li class="tasks__item">Купить корм</li>
-							<li class="tasks__item">Искупать собакена</li>
+						<div class="sort__container">
+							<span class="sort__text">Сортировать:</span>
+							<button class="sort__button" data-status="upcoming" data-condition="asc">↑</button>
+							<button class="sort__button" data-status="upcoming" data-condition="desc">↓</button>
+						</div>
+						<ul class="tasks__list" id="upcomingList">
+							<li class="tasks__item">
+								<input class="tasks__item-checkbox" type="checkbox" name="" id="">
+								<span class="tasks__item-text">Погладить кота</span>
+								<a class="tasks__item-close" href="javascript:void(0)"></a>
+							</li>
+							<li class="tasks__item">
+								<input class="tasks__item-checkbox" type="checkbox" name="" id="">
+								<span class="tasks__item-text">Искупать собакена</span>
+								<a class="tasks__item-close" href="javascript:void(0)"></a>
+							</li>
 						</ul>
 					</div>
 					<div class="tasks__column">
 						<h2 class="h2">В работе</h2>
-						<ul class="tasks__list">
-							<li class="tasks__item">Заработать 1 000 000 денег</li>
-							<li class="tasks__item">Сделать Численны методы</li>
+						<div class="sort__container">
+							<span class="sort__text">Сортировать:</span>
+							<button class="sort__button" data-status="inProgress" data-condition="asc">↑</button>
+							<button class="sort__button" data-status="inProgress" data-condition="desc">↓</button>
+						</div>
+						<ul class="tasks__list" id="inProgressList">
+
+							<li class="tasks__item" data-id="123421412412" data-text="Заработать 1 000 000 денег">
+								<input class="tasks__item-checkbox" type="checkbox" name="" id="">
+								<span class="tasks__item-text">Заработать 1 000 000 денег</span>
+								<a class="tasks__item-close" href="javascript:void(0)"></a>
+							</li>
+							<li class="tasks__item">
+								<input class="tasks__item-checkbox" type="checkbox" name="" id="">
+								<span class="tasks__item-text">Сделать Численны методы</span>
+								<a class="tasks__item-close" href="javascript:void(0)"></a>
+							</li>
 						</ul>
 					</div>
 					<div class="tasks__column">
 						<h2 class="h2">Выполненные</h2>
-						<ul class="tasks__list">
-							<li class="tasks__item">Приготовить макароны</li>
-							<li class="tasks__item">Заточить макароны</li>
+						<div class="sort__container">
+							<span class="sort__text">Сортировать:</span>
+							<button class="sort__button" data-status="completed" data-condition="asc">↑</button>
+							<button class="sort__button" data-status="completed" data-condition="desc">↓</button>
+						</div>
+						<ul class="tasks__list" id="completedList">
+							<li class="tasks__item">
+								<input class="tasks__item-checkbox" checked type="checkbox" name="" id="">
+								<span class="tasks__item-text">Приготовить макароны</span>
+								<a class="tasks__item-close" href="javascript:void(0)"></a>
+							</li>
+							<li class="tasks__item">
+								<input class="tasks__item-checkbox" checked type="checkbox" name="" id="">
+								<span class="tasks__item-text">Заточить макароны</span>
+								<a class="tasks__item-close" href="javascript:void(0)"></a>
+							</li>
 						</ul>
 					</div>
 				</div>
+
 
 				<button class="tasks__button-add button button-primary" onclick="window.taskDialog.showModal()">Добавить
 					задачу</button>
@@ -191,7 +229,6 @@
 		</div>
 	</footer>
 
-	<script src="script.js"></script>
 	<script src="bundle.js"></script>
 </body>
 
